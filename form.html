@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Form Validation-Reuel's Parking</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
   </head>
   <body>
     <div class="container">
@@ -16,7 +17,7 @@
         <div class="input-field" id="car-field">
           <label for="car-year">Car</label>
           <div class="input-group">
-            <input id="car-year" type="text" placeholder="Year" minlength="4">
+            <input id="car-year" type="number" placeholder="Year">
             <input id="car-make" type="text" placeholder="Make" minlength="3">
             <input id="car-model" type="text" placeholder="Model" minlength="2">
           </div>
@@ -27,7 +28,7 @@
         </div>
         <div class="input-field" id="days-field">
           <label for="days">Number of days</label>
-          <input id="days" type="text" minlength="1">
+          <input id="days" type="number" minlength="1" maxlength="30">
         </div>
         <div class="input-field" id="credit-card-field">
           <label for="credit-card">Credit Card</label>
@@ -37,7 +38,7 @@
           <div class="col">
             <div class="input-field" id="cvv-field">
               <label for="cvv">CVV</label>
-              <input id="cvv" type="text" minlength="3">
+              <input id="cvv" type="number" minlength="3">
             </div>
           </div>
           <div class="col">

@@ -22,3 +22,27 @@ function luhnCheck(val) {
     }
     return (sum % 10) == 0;
 }
+function validateYear(number) {
+    if (number < 1900 || number > 2022) {
+    return false;
+}
+    else {
+        return true;
+    } 
+}
+function validateForm(){
+const form = document.querySelector("#parking-form")
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    let carYear=document.querySelector("#car-year")
+    let validCarYear=validateYear(carYear.value)
+    console.log(validCarYear);  
+    if (validCarYear === true){
+        carYear.parentElement.classList.add("input-valid")
+    }
+    else {
+        carYear.parentElement.classList.add("input-invalid")
+    }
+    })
+}
+validateForm();
